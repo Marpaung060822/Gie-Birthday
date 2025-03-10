@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>HBD Gie</title>
+</head>
+
+<body>
+    <!-- Menambahkan teks petunjuk di atas kartu -->
+    <div class="instruction-text">Tap the card!</div>
+
+    <!-- Menambahkan tag audio untuk memutar musik -->
+    <audio id="background-music" loop>
+        <source src="music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="card">
+        <div class="imgBox">
+            <div class="bark"></div>
+            <img src="lastofus.jpg" alt="Image">
+        </div>
+        <div class="details">
+            <h4 class="color1">SELAMAT ULANG TAHUN, GIE!</h4>
+            <h4 class="color2">SEMOGA SELALU MENJADI YANG TERBAIK!</h4>
+            <p>Yo, Gie!</p>
+            <p>Selamat ulang tahun yang ke-21!</p>
+            <p>Semoga hari-harimu makin kece, sukses, dan penuh kebahagiaan!</p>
+            <p class="text-right">Tetap keren,</p>
+            <p class="text-right">KID</p>
+        </div>
+    </div>
+
+    <!-- Tombol Play untuk memulai audio -->
+    <button id="play-button" class="play-btn">Play Music</button>
+
+    <script>
+        // Menunggu interaksi pengguna sebelum memulai audio
+        document.getElementById('play-button').addEventListener('click', function() {
+            var audio = document.getElementById('background-music');
+            audio.play(); // Mulai memainkan musik
+            this.style.display = 'none'; // Menyembunyikan tombol setelah dipilih
+        });
+    </script>
+</body>
+
+</html>
